@@ -1,0 +1,10 @@
+{% extends 'todo/layout.html' %}
+{% block content %}
+
+<h1>Nueva Tarea</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Agregar Tarea</button>
+</form>
+{% endblock %}
